@@ -1,0 +1,19 @@
+{
+  "name": "kid-coding-class",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jack-vo/kid-coding-class.git",
+  "author": "Jack Vo <jackvo.au@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "server:start": "yarn http-server --cors"
+  },
+  "stackblitz": {
+    "installDependencies": true,
+    "startCommand": "yarn run server:start"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {}
+}
