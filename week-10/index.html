@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 10</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+      }
+      .header-icon {
+        width: 36px;
+      }
+
+      .header-items {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .logo {
+        width: 300px;
+      }
+
+      .search-input {
+        border-width: 1px;
+        border-style: solid;
+        border-color: lightgray;
+        border-radius: 30px;
+        height: 48px;
+        width: 600px;
+        padding-left: 50px;
+        font-size: 20px;
+      }
+
+      .controls {
+        display: flex;
+        gap: 12px;
+      }
+
+      .controls button {
+        border: none;
+        background-color: lightgray;
+        border-radius: 4px;
+        color: black;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 14px;
+        height: 36px;
+      }
+
+      .footer {
+        background-color: lightgray;
+      }
+
+      .footer-top-section {
+        padding: 15px;
+        border-bottom-width: 1px;
+        border-bottom-color: gray;
+        border-bottom-style: solid;
+      }
+
+      .footer-bottom-section {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer-items {
+        display: flex;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-items">
+          <a>About</a>
+          <a>Store</a>
+        </div>
+        <div class="header-items">
+          <a>Gmail</a>
+          <a>Images</a>
+          <a>
+            <img
+              class="header-icon"
+              src="https://www.svgrepo.com/show/532198/list-ul-alt.svg" />
+          </a>
+          <a>
+            <img
+              class="header-icon"
+              src="https://www.svgrepo.com/show/492689/avatar-boy.svg" />
+          </a>
+        </div>
+      </div>
+      <div class="body">
+        <div>
+          <img
+            class="logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" />
+        </div>
+        <div>
+          <input class="search-input" />
+        </div>
+        <div class="controls">
+          <button>Google Search</button>
+          <button>I'm Feeling Lucky</button>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-top-section">Australia</div>
+        <div class="footer-bottom-section">
+          <div class="footer-items">
+            <a>Advertising</a>
+            <a>Business</a>
+            <a>How Search works</a>
+          </div>
+          <div class="footer-items">
+            <a>Privacy</a>
+            <a>Terms</a>
+            <a>Settings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
