@@ -88,6 +88,26 @@
         display: flex;
         gap: 20px;
       }
+
+      .search img {
+        height: 30px;
+      }
+
+      .search {
+        position: relative;
+      }
+
+      .search-left-section {
+        position: absolute;
+        top: 12px;
+        left: 20px;
+      }
+
+      .search-right-section {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
     </style>
   </head>
   <body>
@@ -118,8 +138,18 @@
             class="logo"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" />
         </div>
-        <div>
+        <div class="search">
           <input class="search-input" />
+
+          <div class="search-left-section">
+            <img src="https://www.svgrepo.com/show/532554/search-alt.svg" />
+          </div>
+
+          <div class="search-right-section">
+            <img src="https://www.svgrepo.com/show/528402/microphone.svg" />
+            <img
+              src="https://www.svgrepo.com/show/528090/camera-minimalistic.svg" />
+          </div>
         </div>
         <div class="controls">
           <button>Google Search</button>
