@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Week 13 - Google</title>
+    <style>
+      body {
+        margin: 0;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+      }
+
+      .header-items-list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .header-items-list a {
+        color: #202124;
+      }
+
+      .header-item-icon {
+        width: 24px;
+      }
+
+      .header-item-avatar {
+        width: 36px;
+      }
+
+      .body {
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+        flex: 1;
+        /* gap: 30px; */
+      }
+
+      .logo {
+        width: 300px;
+      }
+
+      .search-left-section img {
+        height: 20px;
+      }
+
+      .search-right-section img {
+        height: 30px;
+      }
+
+      /*
+
+      
+
+      .search {
+        position: relative;
+      }
+
+      .search-input {
+        border: 1px solid #dfe1e5;
+        border-radius: 30px;
+        height: 48px;
+        width: 600px;
+        padding-left: 50px;
+        font-size: 20px;
+      }
+
+      .search input:focus {
+        box-shadow: 0 2px 10px rgb(0, 0, 0, 0.2);
+        border-color: transparent;
+        outline: none;
+      }
+
+      .search-left-section {
+        position: absolute;
+        top: 16px;
+        left: 20px;
+      }
+
+      .search-right-section {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+
+      .search-right-section img {
+        height: 30px;
+        margin-left: 20px;
+      }
+
+      .controls {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .controls button {
+        border: 1px solid #f8f9fa;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        color: #3c4043;
+        padding: 0 16px;
+        font-size: 14px;
+        height: 36px;
+      }
+
+      .controls button:hover {
+        box-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+        background-color: #f8f9fa;
+        border-color: #dadce0;
+        color: #202124;
+      }
+
+      .footer {
+        background-color: #f2f2f2;
+      }
+
+      .footer-top-section {
+        padding: 20px;
+        border-bottom: 1px solid #dadce0;
+      }
+      .footer-bottom-section {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .footer-items-list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-items-list">
+          <a>About</a>
+          <a>Store</a>
+        </div>
+        <div class="header-items-list">
+          <a>Gmail</a>
+          <a>Images</a>
+          <a>
+            <img
+              class="header-item-icon"
+              src="https://www.svgrepo.com/show/532198/list-ul-alt.svg" />
+          </a>
+          <a>
+            <img
+              class="header-item-avatar"
+              src="https://www.svgrepo.com/show/492689/avatar-boy.svg" />
+          </a>
+        </div>
+      </div>
+
+      <div class="body">
+        <div>
+          <img
+            class="logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" />
+        </div>
+        <div class="search">
+          <input class="search-input" />
+
+          <div class="search-left-section">
+            <img src="https://www.svgrepo.com/show/532554/search-alt.svg" />
+          </div>
+
+          <div class="search-right-section">
+            <img src="https://www.svgrepo.com/show/528402/microphone.svg" />
+            <img
+              src="https://www.svgrepo.com/show/528090/camera-minimalistic.svg" />
+          </div>
+        </div>
+
+        <div class="controls">
+          <button>Google Search</button>
+          <button>I'm Feeling Lucky</button>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-top-section">Australia</div>
+        <div class="footer-bottom-section">
+          <div class="footer-items-list">
+            <a>Advertising</a>
+            <a>Business</a>
+            <a>How Search works</a>
+          </div>
+          <div class="footer-items-list">
+            <a>Privacy</a>
+            <a>Terms</a>
+            <a>Settings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
