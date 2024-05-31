@@ -4,10 +4,16 @@
     <title>Portolio</title>
     <meta name="robots" content="noindex" />
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
       body {
         font-size: 14px;
         background-color: #0e0e0e;
         color: #fff;
+        font-family: 'Orbitron', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
       }
 
       .header {
@@ -50,6 +56,33 @@
         background-color: red;
         border-radius: 4px;
       }
+
+      /* SUMMARY */
+      .summary {
+        display: flex;
+        justify-content: space-evenly;
+        color: white;
+        margin-top: 50px;
+      }
+      .summary-item-title {
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .summary-item-content {
+        display: flex;
+        gap: 30px;
+        text-align: center;
+      }
+
+      .summary-item-number {
+        font-size: 35px;
+      }
+
+      .summary-item-text {
+        color: gray;
+      }
     </style>
   </head>
   <body>
@@ -68,7 +101,69 @@
           <a>My Friends List</a>
         </div>
       </div>
-      <div class="summary"></div>
+
+      <div class="summary">
+        <div class="summary-item">
+          <div class="summary-item-title">Watched</div>
+          <div class="summary-item-content">
+            <div>
+              <div class="summary-item-number">237</div>
+              <div class="summary-item-text">Movies</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">23</div>
+              <div class="summary-item-text">Series</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">05</div>
+              <div class="summary-item-text">Docs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <div class="summary-item-title">Games played</div>
+          <div class="summary-item-content">
+            <div>
+              <div class="summary-item-number">150</div>
+              <div class="summary-item-text">Action</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">45</div>
+              <div class="summary-item-text">RPG</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">02</div>
+              <div class="summary-item-text">FPS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <div class="summary-item-title">Time spent sleeping</div>
+          <div class="summary-item-content">
+            <div>
+              <div class="summary-item-number">13</div>
+              <div class="summary-item-text">Years</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">02</div>
+              <div class="summary-item-text">Months</div>
+            </div>
+
+            <div>
+              <div class="summary-item-number">15</div>
+              <div class="summary-item-text">Days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="facts"></div>
       <div class="favourite"></div>
     </div>
