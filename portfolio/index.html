@@ -16,10 +16,15 @@
         font-style: normal;
       }
 
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
       .header {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
       }
 
       .logo {
@@ -82,6 +87,36 @@
 
       .summary-item-text {
         color: gray;
+      }
+
+      /* Facts */
+      .facts {
+        margin-top: 140px;
+        display: flex;
+        align-items: center;
+      }
+
+      .facts-image,
+      .facts-content {
+        flex: 1;
+      }
+
+      .facts-image {
+        text-align: center;
+      }
+
+      .facts-image img {
+        max-width: 300px;
+      }
+
+      .facts-title {
+        color: white;
+        font-size: 30px;
+        border-bottom: 4px solid red;
+      }
+
+      .facts li {
+        margin-bottom: 15px;
       }
     </style>
   </head>
@@ -164,7 +199,15 @@
         </div>
       </div>
 
-      <div class="facts"></div>
+      <div class="facts">
+        <div>
+          <img
+            src="https://media3.giphy.com/media/leuNkvf9pE6loEnjnb/source.gif" />
+        </div>
+        <div>
+          <div>True fact</div>
+        </div>
+      </div>
       <div class="favourite"></div>
     </div>
   </body>
