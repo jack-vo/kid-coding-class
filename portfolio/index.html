@@ -96,7 +96,10 @@
         align-items: center;
       }
 
-      .facts-image,
+      .facts-image {
+        flex: 1;
+      }
+
       .facts-content {
         flex: 1;
       }
@@ -106,16 +109,15 @@
       }
 
       .facts-image img {
-        max-width: 300px;
+        width: 300px;
       }
 
       .facts-title {
-        color: white;
         font-size: 30px;
         border-bottom: 4px solid red;
       }
 
-      .facts li {
+      .facts-content li {
         margin-bottom: 15px;
       }
     </style>
