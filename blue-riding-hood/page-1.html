@@ -3,31 +3,20 @@
   <head>
     <meta name="robots" content="noindex" />
     <title>Blue riding hood</title>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
-      body {
-        background: white
-          url('https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/bricks.png')
-          repeat;
-      }
-      .container {
-        max-width: 1200px;
-        height: 700px;
-        margin: 50px auto;
-      }
-      .page {
-        background-color: white;
-        padding: 50px;
-
-        animation: flyin 1.2s ease forwards;
-        opacity: 0;
-        transform: scale(2);
-        filter: blur(4px);
-      }
-
       .page-1 {
         display: flex;
         align-items: center;
         flex-direction: column;
+        padding-top: 80px;
+        padding-bottom: 80px;
         gap: 100px;
       }
 
@@ -35,20 +24,48 @@
         width: 360px;
       }
 
-      @keyframes flyin {
-        to {
-          filter: blur(0);
-          transform: scale(1);
-          opacity: 1;
-        }
+      .title {
+        text-align: center;
+      }
+      .title h1 {
+        font-size: 50px;
+        margin: 0;
+      }
+
+      .blue {
+        color: #1da4ed;
+      }
+
+      .start-button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 30px;
+        padding: 10px 40px;
+        border-radius: 5px;
+        color: #fff;
+        border: none;
+        background-color: #1ca4ed;
+        border-bottom: 4px solid #1993d4;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     <!-- https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/index.php -->
     <div class="container">
-      <div class="page page-1">
-        <button>Into the wood</button>
+      <div class="page page-1 animate__animated animate__lightSpeedInRight">
+        <div class="title">
+          <div>The original story of</div>
+          <h1 class="lobster-regular">
+            <span class="blue">Blue</span> Riding Hood
+          </h1>
+        </div>
+        <a
+          href="page-2.html"
+          class="lobster-regular start-button animate__animated animate__infinite animate__pulse">
+          Into the wood <span class="material-icons"> login </span>
+        </a>
         <img
           class="intro-img"
           src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/tree_background.png" />
