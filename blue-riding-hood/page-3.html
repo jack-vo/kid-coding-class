@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex" />
+    <title>Blue riding hood</title>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+      .page-3 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+      .start-button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 30px;
+        padding: 10px 40px;
+        border-radius: 5px;
+        color: #fff;
+        border: none;
+        background-color: #1ca4ed;
+        border-bottom: 4px solid #1993d4;
+        text-decoration: none;
+      }
+
+      .blue-riding-hood-img {
+        width: 140px;
+        position: absolute;
+        left: -130px;
+        bottom: -130px;
+        animation-name: move-from-left;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+      }
+
+      @keyframes move-from-left {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          left: -47px;
+          bottom: -40px;
+          transform: rotate(15deg);
+        }
+      }
+
+      .wolf-img {
+        width: 180px;
+        position: absolute;
+        right: -180px;
+        bottom: -180px;
+        animation-name: move-from-right;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+      }
+
+      @keyframes move-from-right {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          right: -47px;
+          bottom: -60px;
+          transform: rotate(-15deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/index.php -->
+    <div class="container">
+      <div class="page page-3 animate__animated animate__lightSpeedInRight">
+        <div class="text text-align-center">
+          <div>
+            <span class="blue">Blue</span> Riding Hood has received a
+            hand-written letter explaining that her grandmother is ill!
+          </div>
+
+          <div class="text-bold">What gift should she take?</div>
+        </div>
+        <a
+          href="page-3.html"
+          class="lobster-regular start-button animate__animated animate__infinite animate__pulse">
+          Continue <span class="material-icons"> login </span>
+        </a>
+        <img
+          class="blue-riding-hood-img"
+          src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/blueridinghood.png" />
+      </div>
+    </div>
+  </body>
+</html>
