@@ -57,3 +57,31 @@ body {
   font-weight: bold;
   font-size: 30px;
 }
+
+.animated-rainbow {
+  animation: rainbowShadow 7s infinite;
+}
+
+@keyframes rainbowShadow {
+  0% {
+    box-shadow: 0 0 10px 2px rgba(255, 0, 0, 0.8); /* Red */
+  }
+  16% {
+    box-shadow: 0 0 10px 2px rgba(255, 165, 0, 0.8); /* Orange */
+  }
+  33% {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 0, 0.8); /* Yellow */
+  }
+  50% {
+    box-shadow: 0 0 10px 2px rgba(0, 128, 0, 0.8); /* Green */
+  }
+  66% {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 255, 0.8); /* Blue */
+  }
+  83% {
+    box-shadow: 0 0 10px 2px rgba(75, 0, 130, 0.8); /* Indigo */
+  }
+  100% {
+    box-shadow: 0 0 10px 2px rgba(238, 130, 238, 0.8); /* Violet */
+  }
+}
