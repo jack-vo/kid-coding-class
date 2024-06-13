@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex" />
+    <title>Blue riding hood</title>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+      .page-5 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 80px;
+      }
+
+      .text {
+        max-width: 800px;
+      }
+
+      .door-img {
+        width: 1060px;
+        height: 480px;
+      }
+
+      .bomb {
+        position: absolute;
+      }
+
+      .bomb img {
+        height: 100px;
+      }
+
+      .bomb-1 {
+        bottom: 130px;
+        left: 300px;
+        animation-name: bomb-1;
+        animation-duration: 3s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes bomb-1 {
+        0% {
+          left: 300px;
+        }
+        50% {
+          left: 800px;
+        }
+        100% {
+          left: 300px;
+        }
+      }
+
+      .number {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50px;
+        box-shadow: 0 0 20px black;
+      }
+
+      .number-7 {
+        left: 350px;
+        bottom: 150px;
+        animation-name: number-7;
+        animation-duration: 4s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes number-7 {
+        0% {
+          left: 350px;
+          bottom: 150px;
+        }
+        30% {
+          left: 750px;
+          bottom: 250px;
+        }
+        60% {
+          left: 250px;
+          bottom: 300px;
+        }
+        100% {
+          left: 350px;
+          bottom: 150px;
+        }
+      }
+
+      .blue-riding-hood-img {
+        width: 140px;
+        position: absolute;
+        z-index: 3;
+        left: 330px;
+        bottom: -250px;
+        animation-name: move-from-bottom;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+      }
+
+      @keyframes move-from-bottom {
+        0% {
+          bottom: -250px;
+        }
+        100% {
+          bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/index.php -->
+    <div class="container">
+      <div class="page page-5 animate__animated animate__lightSpeedInRight">
+        <div class="text text-align-center">
+          <div>
+            <span class="blue">Blue</span> stands in front of the mysterious
+            door, puzzled by a riddle inscribed on a mysterious door. The riddle
+            reads.
+          </div>
+          <div class="text-bold">
+            "I am not alive, but I grow; I don't have lungs, but I need air; I
+            don't have a mouth, but water kills me. What number am I?"
+          </div>
+          <div>What should Blue Riding Hood press to open the door?</div>
+        </div>
+        <div class="door">
+          <a class="number number-7 lobster-regular">7</a>
+          <a class="bomb bomb-1" href="bomb-explode-the-end.html">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/021/125/685/small_2x/bomb-flat-icon-png.png" />
+          </a>
+          <img
+            class="door-img"
+            src="https://img.freepik.com/free-vector/abandoned-dungeon-medieval-castle-night-interior-with-moonlight-fall-wood-arched-door-barred-window-shadow-cracked-stone-wall-with-spiderweb-dilapidated-palace-cartoon-vector-illustration_107791-7764.jpg?t=st=1718321535~exp=1718325135~hmac=6521aff0ab463f98b2414c5859e708ae12e0eecb4ed1742f04cce9b99eeb7197&w=1380" />
+          <img
+            class="blue-riding-hood-img"
+            src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/blueridinghood.png" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
