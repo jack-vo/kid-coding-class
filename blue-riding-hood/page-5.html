@@ -38,14 +38,11 @@
       .bomb-1 {
         bottom: 130px;
         left: 300px;
-        animation-name: bomb-1;
-        animation-duration: 3s;
+        animation: ani-bomb-1 3s forwards infinite;
         animation-delay: 2s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
       }
 
-      @keyframes bomb-1 {
+      @keyframes ani-bomb-1 {
         0% {
           left: 300px;
         }
@@ -73,14 +70,11 @@
       .number-7 {
         left: 350px;
         bottom: 150px;
-        animation-name: number-7;
-        animation-duration: 4s;
+        animation: ani-number-7 4s forwards infinite;
         animation-delay: 2s;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
       }
 
-      @keyframes number-7 {
+      @keyframes ani-number-7 {
         0% {
           left: 350px;
           bottom: 150px;
@@ -99,15 +93,122 @@
         }
       }
 
+      .number-5 {
+        text-decoration: none;
+        color: black;
+        left: 290px;
+        bottom: 200px;
+        animation: ani-number-5 3s forwards infinite;
+        animation-delay: 2s;
+      }
+
+      @keyframes ani-number-5 {
+        0% {
+          left: 300px;
+          bottom: 200px;
+          opacity: 1;
+        }
+        30% {
+          left: 500px;
+          bottom: 300px;
+          opacity: 0;
+        }
+        60% {
+          left: 700px;
+          bottom: 200px;
+          opacity: 0.5;
+        }
+        80% {
+          opacity: 0;
+        }
+        100% {
+          left: 300px;
+          bottom: 200px;
+          opacity: 1;
+        }
+      }
+
+      .bomb-2 {
+        bottom: 10px;
+        left: 200px;
+        opacity: 0;
+        animation: ani-bomb-2 6s forwards infinite;
+        animation-delay: 2s;
+      }
+
+      @keyframes ani-bomb-2 {
+        0% {
+          bottom: 100px;
+          left: 200px;
+          opacity: 0;
+        }
+        20% {
+          bottom: 300px;
+          left: 300px;
+          opacity: 1;
+        }
+        40% {
+          bottom: 100px;
+          left: 500px;
+          opacity: 0.2;
+          transform: scale(1.5);
+        }
+        60% {
+          bottom: 300px;
+          left: 800px;
+          opacity: 1;
+          transform: scale(1);
+        }
+        80% {
+          bottom: 100px;
+          left: 800px;
+          transform: scale(2);
+        }
+        100% {
+          transform: scale(1);
+          bottom: 100px;
+          left: 200px;
+          opacity: 1;
+        }
+      }
+
+      .number-3 {
+        left: 548px;
+        bottom: 232px;
+        animation: ani-number-3 3s forwards infinite;
+        animation-delay: 2s;
+      }
+
+      @keyframes ani-number-3 {
+        0% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        25% {
+          opacity: 0;
+          transform: scale(2);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        75% {
+          opacity: 0;
+          transform: scale(2);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
       .blue-riding-hood-img {
         width: 140px;
         position: absolute;
         z-index: 3;
         left: 330px;
         bottom: -250px;
-        animation-name: move-from-bottom;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
+        animation: move-from-bottom 3s forwards;
         animation-delay: 2s;
       }
 
@@ -138,8 +239,22 @@
           <div>What should Blue Riding Hood press to open the door?</div>
         </div>
         <div class="door">
-          <a class="number number-7 lobster-regular">7</a>
+          <a
+            class="number number-7 lobster-regular"
+            onclick="alert('Oops, wrong answer! Try again!')"
+            >7</a
+          >
+          <a
+            class="number number-3 lobster-regular"
+            onclick="alert('Oops, wrong answer! Try again!')"
+            >3</a
+          >
+          <a class="number number-5 lobster-regular" href="page-6.html">5</a>
           <a class="bomb bomb-1" href="bomb-explode-the-end.html">
+            <img
+              src="https://static.vecteezy.com/system/resources/thumbnails/021/125/685/small_2x/bomb-flat-icon-png.png" />
+          </a>
+          <a class="bomb bomb-2" href="bomb-explode-the-end.html">
             <img
               src="https://static.vecteezy.com/system/resources/thumbnails/021/125/685/small_2x/bomb-flat-icon-png.png" />
           </a>
