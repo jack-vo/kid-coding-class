@@ -65,7 +65,7 @@ body {
   font-size: 30px;
 }
 
-.start-button {
+.primary-button {
   display: flex;
   align-items: center;
   gap: 10px;
