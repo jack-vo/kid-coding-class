@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Adopt Me</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+      .concert-one-regular {
+        font-family: 'Concert One', sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        height: 100vh;
+        background-color: #f8f8f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: #555;
+      }
+
+      .container {
+        background-color: white;
+        width: 800px;
+        padding: 30px;
+        display: flex;
+        gap: 80px;
+        border: 1px solid #d8d8d8;
+        box-shadow: 12px 12px #e2e2e2;
+      }
+
+      .container img {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        border: 6px solid #eee;
+      }
+
+      .title {
+        border-bottom: 2px dashed #ccc;
+        padding-bottom: 10px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .name {
+        font-size: 36px;
+      }
+
+      .gender {
+        display: flex;
+        background-color: #ccc;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .reasons h3 {
+        text-align: center;
+        color: white;
+        padding: 10px;
+        font-size: 30px;
+        text-shadow: 1px 1px black;
+        border-radius: 4px;
+      }
+
+      .reasons li {
+        margin-bottom: 10px;
+      }
+
+      .highlight {
+        color: #ff4500;
+      }
+
+      button {
+        background-color: white;
+        color: #ff4500;
+        border: 2px solid #ff4500;
+        width: 100%;
+        padding: 20px;
+        font-size: 36px;
+      }
+
+      button:hover {
+        background-color: #ff4500;
+        color: white;
+      }
+
+      .tracking-in-expand {
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1)
+          both;
+      }
+
+      @keyframes tracking-in-expand {
+        0% {
+          letter-spacing: -0.5em;
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .color-change-2x {
+        animation: color-change-2x 2s linear infinite alternate both;
+      }
+      @keyframes color-change-2x {
+        0% {
+          background: #19dcea;
+        }
+        100% {
+          background: #b22cff;
+        }
+      }
+
+      .flicker-1 {
+        animation: flicker-1 5s linear infinite both;
+      }
+      @keyframes flicker-1 {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        41.99% {
+          opacity: 1;
+        }
+        42% {
+          opacity: 0;
+        }
+        43% {
+          opacity: 0;
+        }
+        43.01% {
+          opacity: 1;
+        }
+        47.99% {
+          opacity: 1;
+        }
+        48% {
+          opacity: 0;
+        }
+        49% {
+          opacity: 0;
+        }
+        49.01% {
+          opacity: 1;
+        }
+      }
+
+      .heartbeat {
+        animation: heartbeat 1.5s ease-in-out infinite both;
+      }
+
+      @keyframes heartbeat {
+        from {
+          transform: scale(1);
+          transform-origin: center center;
+          animation-timing-function: ease-out;
+        }
+        10% {
+          transform: scale(0.91);
+          animation-timing-function: ease-in;
+        }
+        17% {
+          transform: scale(0.98);
+          animation-timing-function: ease-out;
+        }
+        33% {
+          transform: scale(0.87);
+          animation-timing-function: ease-in;
+        }
+        45% {
+          transform: scale(1);
+          animation-timing-function: ease-out;
+        }
+      }
+    </style>
+  </head>
+  <body class="concert-one-regular">
+    <div class="container">
+      <img src="https://i.imgur.com/NxgX1hO.png" />
+      <div class="content">
+        <h1 class="title tracking-in-expand">Adopt Me Application</h1>
+        <div class="info">
+          <div class="name">Jack Vo</div>
+          <div class="gender">
+            <span class="material-icons"> male </span> Male
+          </div>
+        </div>
+
+        <div class="reasons">
+          <h3 class="color-change-2x">Reasons to adopt me</h3>
+          <ul>
+            <li>
+              <span class="highlight flicker-1">Low maintenance</span> I do need
+              to take shower frequently, just once a months is enough!
+            </li>
+            <li>
+              <span class="highlight flicker-1">Professional napper</span> I can
+              teach you how to maximize your daily snooze time!
+            </li>
+            <li>
+              <span class="highlight flicker-1">Expert at avoiding chores</span>
+              the perfect role model at chore avoidance, like pretending to be
+              asleep or hiding under a blanket!
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <button class="concert-one-regular heartbeat">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
