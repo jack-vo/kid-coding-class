@@ -1,116 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta name="robots" content="noindex" />
-    <title>Blue riding hood</title>
-    <link rel="stylesheet" type="text/css" href="global.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <style>
-      .page-4 {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding-top: 80px;
-        padding-bottom: 80px;
-        overflow: hidden;
-      }
+    <head>
+        <meta name="robots" content="noindex" />
+        <title>Blue riding hood</title>
+        <link rel="stylesheet" type="text/css" href="global.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <style>
+            .page-4 {
+                overflow: hidden;
+            }
 
-      .road-selection {
-        position: relative;
-        display: flex;
-        gap: 30px;
-      }
+            .road-selection {
+                display: flex;
+                gap: 30px;
+            }
 
-      .road-selection a {
-        position: relative;
-        width: 550px;
-        padding: 0;
-        border: none;
-        background-color: transparent;
-        text-align: center;
-      }
+            .road-selection a {
+                position: relative;
+            }
 
-      .road-selection a:hover {
-        z-index: 1;
-        animation-name: pulse;
-        animation-iteration-count: infinite;
-        animation-duration: 1.5s;
-      }
+            .road-selection a:hover {
+                animation: zoom-out 0.4s ease-in-out forwards;
+            }
 
-      .road-selection a img {
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
-      }
+            @keyframes zoom-out {
+                100% {
+                    transform: scale(1.05);
+                }
+            }
 
-      .road-selection a span {
-        width: 80%;
-        font-size: 30px;
-        border-radius: 20px;
-        position: absolute;
-        left: 20px;
-        top: 130px;
-        padding: 30px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.8);
-      }
+            .road-selection a img {
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+            }
 
-      .blue-riding-hood-img {
-        width: 140px;
-        position: absolute;
-        z-index: 3;
-        left: 458px;
-        bottom: -250px;
-        animation-name: move-from-bottom;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        animation-delay: 2s;
-      }
+            .road-selection a span {
+                width: 80%;
+                font-size: 30px;
+                border-radius: 20px;
+                position: absolute;
+                top: 130px;
+                left: 40px;
+                padding: 30px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.8);
+                text-align: center;
+            }
 
-      @keyframes move-from-bottom {
-        0% {
-          bottom: -250px;
-        }
-        100% {
-          bottom: -60px;
-        }
-      }
-    </style>
-  </head>
-  <body class="indie-flower-regular">
-    <!-- https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/index.php -->
-    <div class="container">
-      <div class="page page-4 tilt-in-fwd-tr">
-        <div class="text text-align-center">
-          <div>
-            <span class="blue">Blue</span> Riding Hood leaves home with her
-            basket and arrives at a crossroad.
-          </div>
-          <div class="text-bold">Which road will she take?</div>
+            .blue-riding-hood-img {
+                width: 140px;
+                position: absolute;
+                z-index: 3;
+                left: 500px;
+                bottom: -180px;
+                animation: move-from-bottom 3s forwards 2s;
+            }
+
+            @keyframes move-from-bottom {
+                0% {
+                    bottom: -180px;
+                }
+                100% {
+                    bottom: 30px;
+                }
+            }
+        </style>
+    </head>
+    <body class="indie-flower-regular">
+        <div class="container">
+            <div class="page page-4 tilt-in-fwd-tr">
+                <div class="text text-align-center">
+                    <div>
+                        <span class="blue">Blue</span> Riding Hood leaves home
+                        with her basket and arrives at a crossroad.
+                    </div>
+                    <div class="text-bold">Which road will she take?</div>
+                </div>
+                <div class="road-selection">
+                    <a href="long-road-the-end.html">
+                        <img
+                            class="animated-rainbow"
+                            src="https://img.freepik.com/free-vector/beautiful-landscape-nature-with-flat-illustration-valley-spruce-forest-nature-tourism-landscape-travel-mountains-adventure-concept_1150-37321.jpg"
+                        />
+                        <span class="lobster-regular">
+                            The Fun Looooong road
+                        </span>
+                    </a>
+                    <a href="page-5.html">
+                        <img
+                            class="animated-rainbow"
+                            src="https://img.freepik.com/free-vector/forest-scene-with-various-forest-trees_1308-61222.jpg"
+                        />
+                        <span class="lobster-regular">
+                            The Boring Sneaky shortcut
+                        </span>
+                    </a>
+
+                    <img
+                        class="blue-riding-hood-img"
+                        src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/blueridinghood.png"
+                    />
+                </div>
+            </div>
         </div>
-        <div class="road-selection">
-          <a href="long-road-the-end.html">
-            <img
-              class="road-1 animated-rainbow"
-              src="https://img.freepik.com/free-vector/beautiful-landscape-nature-with-flat-illustration-valley-spruce-forest-nature-tourism-landscape-travel-mountains-adventure-concept_1150-37321.jpg?t=st=1718266234~exp=1718269834~hmac=c9dbc7117eaeb5a627c55c7d8c62dcac78ecda37f78a4b9a2f3ff828003702fe&w=1380" />
-            <span class="lobster-regular">The <b>Fun</b> Looooong road</span>
-          </a>
-          <a href="page-5.html">
-            <img
-              class="road-2 animated-rainbow"
-              src="https://img.freepik.com/free-vector/forest-scene-with-various-forest-trees_1308-61222.jpg?t=st=1718266335~exp=1718269935~hmac=1a0de17629e09e397cde3108bfff85ad8cbdbae7a614d67c9a3607a7a25ccadf&w=1380" />
-            <span class="lobster-regular"
-              >The <b>Boring</b> Sneaky shortcut</span
-            >
-          </a>
-
-          <img
-            class="blue-riding-hood-img"
-            src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/blueridinghood.png" />
-        </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
