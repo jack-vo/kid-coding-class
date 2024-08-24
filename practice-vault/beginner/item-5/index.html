@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Practice Item 4</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+
+            body {
+                margin: 0;
+                width: 100vw;
+                height: 100vh;
+                background: url('https://img.freepik.com/free-photo/smooth-tan-smoke_23-2147734860.jpg?w=3000');
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'La Belle Aurore', cursive;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .container {
+                width: 550px;
+                height: 550px;
+                position: relative;
+                background: white
+                    url('https://cdn.hero.page/pfp/54899c9b-88db-42df-91e6-0ad43a25645c-depressed-anime-girl-in-the-rain-aesthetics-depressed-anime-girl-pfp-2.png')
+                    no-repeat;
+                background-size: cover;
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+                border: 20px solid white;
+            }
+
+            .box {
+                width: 400px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                color: crimson;
+                text-align: center;
+                font-size: 50px;
+                line-height: 1.3;
+                text-shadow: 1px 2px rgba(0, 0, 0, 0.7);
+                transform: rotate(-7deg);
+                opacity: 0;
+                animation: fade-in 1.5s ease-in forwards 2s;
+            }
+
+            @keyframes fade-in {
+                100% {
+                    transform: rotate(-10deg);
+                    opacity: 1;
+                }
+            }
+
+            .horizontal-line {
+                position: absolute;
+                height: 20px;
+                background-color: #fff;
+                width: 0;
+                left: 0;
+                top: 270px;
+                animation: from-left 2s ease-in forwards;
+            }
+
+            @keyframes from-left {
+                100% {
+                    width: 550px;
+                }
+            }
+
+            .vertical-line {
+                position: absolute;
+                width: 20px;
+                height: 0;
+                background-color: #fff;
+                top: 0;
+                left: 270px;
+
+                animation: from-top 2s ease-in forwards;
+            }
+
+            @keyframes from-top {
+                100% {
+                    height: 550px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--https://tint.creativemarket.com/9s5PscVhoTOcHLWpvCaWIzxdGr0xj692eg93bk9No7c/width:1160/height:2192/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzM3OC8zNzgyLzM3ODI3MTMvMTNfbWlsZXN0b25lX21hZ2F6aW5lX292ZXJ2aWV3LW8uanBn?1535621157-->
+        <div class="container">
+            <div class="horizontal-line"></div>
+            <div class="vertical-line"></div>
+            <div class="box">Tears are words the heart can't say</div>
+        </div>
+    </body>
+</html>
