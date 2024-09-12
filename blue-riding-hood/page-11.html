@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="robots" content="noindex" />
+        <title>Blue riding hood</title>
+        <link rel="stylesheet" type="text/css" href="global.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <style>
+            .page-11 {
+                overflow: hidden;
+            }
+            .dead-zone,
+            .the-end {
+                cursor:
+                    url('images/shooting_point.png') 32 32,
+                    auto;
+            }
+
+            .page-11 {
+                padding-bottom: 0;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .forest {
+                position: relative;
+                width: 100%;
+            }
+
+            .birds-1 {
+                position: absolute;
+                top: 120px;
+                left: 120px;
+                z-index: -1;
+            }
+
+            .birds-2 {
+                width: 300px;
+                position: absolute;
+                top: 200px;
+                left: -300px;
+                z-index: -1;
+                animation: birds-2 10s linear infinite 2s;
+            }
+
+            @keyframes birds-2 {
+                100% {
+                    left: 200%;
+                }
+            }
+
+            .t-rex {
+                width: 200px;
+                position: absolute;
+                bottom: 380px;
+                left: -200px;
+                z-index: -1;
+                animation: t-rex 10s linear infinite 2s;
+            }
+
+            @keyframes t-rex {
+                50% {
+                    bottom: 20px;
+                    left: 470px;
+                }
+                100% {
+                    left: 200%;
+                }
+            }
+
+            .sheep-1 {
+                width: 100px;
+                position: absolute;
+                bottom: 243px;
+                left: 45px;
+            }
+
+            .sheep-2 {
+                width: 100px;
+                position: absolute;
+                bottom: 206px;
+                left: 120px;
+            }
+
+            .t-rex-2 {
+                width: 340px;
+                position: absolute;
+                bottom: 188px;
+                right: 117px;
+                z-index: -1;
+                transform: scale(-1, 1);
+            }
+
+            .dog {
+                width: 130px;
+                position: absolute;
+                bottom: 182px;
+                right: 35px;
+            }
+
+            .dog-2 {
+                width: 80px;
+                position: absolute;
+                bottom: 157px;
+                left: 400px;
+            }
+
+            .fake-wolf {
+                width: 30px;
+                position: absolute;
+                bottom: 270px;
+                left: 285px;
+                z-index: -1;
+            }
+
+            .rocket {
+                width: 80px;
+                position: absolute;
+                bottom: 120px;
+                left: 590px;
+                z-index: -1;
+                animation: rocket 10s ease-out infinite 4s;
+            }
+
+            @keyframes rocket {
+                100% {
+                    bottom: 200%;
+                    left: -50px;
+                }
+            }
+
+            .monkey {
+                width: 70px;
+                position: absolute;
+                bottom: 321px;
+                right: 207px;
+            }
+
+            .forest-background {
+                width: 100%;
+            }
+
+            .dead-zone {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+
+            .the-end {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                right: 37px;
+                bottom: 440px;
+                z-index: 2;
+                /*background: red;*/
+            }
+
+            .wolf {
+                width: 100px;
+                position: absolute;
+                right: 15px;
+                bottom: 327px;
+                z-index: -1;
+                transform: rotate(-5deg);
+            }
+
+            .hunter {
+                width: 150px;
+                position: absolute;
+                right: 346px;
+                bottom: 20px;
+            }
+        </style>
+    </head>
+    <body class="indie-flower-regular">
+        <div class="container">
+            <div class="page page-11 tilt-in-fwd-tr">
+                <div class="text text-align-center">
+                    <div>Swift like a wind, the wolf runs to the forest.</div>
+                    <div>
+                        The hunter chases after him, and he knows the wolf is
+                        hiding somewhere near.
+                    </div>
+
+                    <div class="red">
+                        Ready his axe, the hunter has only
+                        <span class="text-bold">one chance</span> to finish the
+                        wolf.
+                        <span class="text-bold"
+                            >Where should he throw his axe?</span
+                        >
+                    </div>
+                </div>
+                <div class="forest">
+                    <img
+                        class="forest-background"
+                        src="images/sunrise-in-the-field.png"
+                    />
+                    <img
+                        class="birds-1"
+                        src="https://i.gifer.com/origin/a6/a6d3b66fdae13772f771eb995b395369_w200.gif"
+                    />
+                    <img class="birds-2" src="https://i.gifer.com/ZHug.gif" />
+                    <img
+                        class="t-rex"
+                        src="https://media.tenor.com/nOUvTtXxG18AAAAj/dancing-trex.gif"
+                    />
+                    <img
+                        class="sheep-1"
+                        src="https://i.pinimg.com/originals/ea/ac/fd/eaacfd66d475948886012d61757dc56c.gif"
+                    />
+                    <img
+                        class="sheep-2"
+                        src="https://i.pinimg.com/originals/61/a2/4d/61a24d8ae427d75519110c7098d930b6.gif"
+                    />
+                    <img
+                        class="t-rex-2"
+                        src="https://media.tenor.com/pzXw49a9AlYAAAAi/dino.gif"
+                    />
+                    <img
+                        class="dog"
+                        src="https://i.pinimg.com/originals/f6/42/ee/f642eea95a8d6676dbfa530fe56b5ade.gif"
+                    />
+                    <img
+                        class="dog-2"
+                        src="https://media.tenor.com/cOIi2HzQhH4AAAAi/i-am-so-cute-doggo.gif"
+                    />
+                    <img
+                        class="fake-wolf"
+                        src="https://media.tenor.com/Mribmfi0TFIAAAAi/wag-wagging.gif"
+                    />
+                    <img
+                        class="monkey"
+                        src="https://media.tenor.com/NRLOxnpvHukAAAAi/ponke-ponkesol.gif"
+                    />
+                    <img
+                        class="rocket"
+                        src="https://media.tenor.com/jfj-uQd1eLUAAAAi/fire-space.gif"
+                    />
+                    <a class="dead-zone" href="hunter-wrong-choice.html"></a>
+                    <a class="the-end" href="the-end.html"></a>
+                    <img
+                        class="wolf"
+                        src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/wolf.png"
+                    />
+
+                    <img
+                        class="hunter"
+                        src="https://labs.learnosity.com/solutions/sales-enablement/custom-ui/blue-riding-hood/assets/img/mike.png"
+                    />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
