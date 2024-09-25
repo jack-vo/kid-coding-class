@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Practice Item 6</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+            body {
+                margin: 0;
+                width: 100vw;
+                height: 100vh;
+                font-family: 'SUSE', sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+
+            .container {
+                background: white;
+                position: relative;
+                width: 700px;
+                padding: 30px;
+                border: 20px solid #fcd3e3;
+                border-left-color: #95e6df;
+                border-bottom-color: #95e6df;
+                box-shadow:
+                    0 6px 10px rgba(0, 0, 0, 0.5),
+                    inset 0 0 10px rgba(0, 0, 0, 0.4);
+            }
+
+            .content {
+                border: 8px dotted #aaddfe;
+                text-align: center;
+                padding-top: 20px;
+                padding-bottom: 30px;
+            }
+
+            .my-avatar {
+                width: 180px;
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                font-size: 24px;
+                align-items: center;
+            }
+
+            .certificate {
+                font-style: italic;
+                font-weight: bold;
+                font-size: 30px;
+            }
+
+            .subject {
+                font-size: 40px;
+                font-weight: bold;
+                color: orangered;
+                text-shadow: 2px 2px 1px #333;
+            }
+
+            .name {
+                width: 400px;
+                font-size: 40px;
+                border-bottom: 3px dotted #666;
+            }
+
+            .img-1 {
+                width: 180px;
+                position: absolute;
+                left: -55px;
+                bottom: -55px;
+                transform: rotate(-5deg);
+            }
+
+            .img-2 {
+                width: 100px;
+                position: absolute;
+                right: 5px;
+                bottom: 5px;
+            }
+
+            .img-3 {
+                width: 100px;
+                position: absolute;
+                left: -15px;
+                top: -15px;
+            }
+
+            .img-4 {
+                width: 100px;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                transform: scale(-1, 1);
+            }
+
+            .tada-1 {
+                width: 200px;
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+            }
+
+            .tada-2 {
+                width: 200px;
+                position: absolute;
+                left: 45%;
+                bottom: 0;
+            }
+
+            .tada-3 {
+                width: 180px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+
+            .heartbeat {
+                animation: heartbeat 2s ease-in-out 1s infinite both;
+            }
+
+            @keyframes heartbeat {
+                from {
+                    transform: scale(1);
+                    transform-origin: center center;
+                    animation-timing-function: ease-out;
+                }
+                10% {
+                    transform: scale(0.91);
+                    animation-timing-function: ease-in;
+                }
+                17% {
+                    transform: scale(0.98);
+                    animation-timing-function: ease-out;
+                }
+                33% {
+                    transform: scale(0.87);
+                    animation-timing-function: ease-in;
+                }
+                45% {
+                    transform: scale(1);
+                    animation-timing-function: ease-out;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--https://i.etsystatic.com/8138800/r/il/e77053/5504612650/il_570xN.5504612650_9qvj.jpg-->
+        <!--https://au.pinterest.com/pin/346425396348903941/-->
+        <div class="container">
+            <div class="content">
+                <!--<img class="my-avatar" src="https://i.pinimg.com/originals/65/c6/fe/65c6fe4bdb614ed6ff95d41c2f7bfd47.gif" />-->
+                <!--<img class="my-avatar" src="https://i.pinimg.com/originals/8f/ef/2e/8fef2e8c3b0b91c868824cf7cebc3f97.gif" />-->
+                <!--                <img class="my-avatar" src="https://i.pinimg.com/originals/5b/1a/74/5b1a748aae0ebb507fbebf17c9bbbb5a.gif"/>-->
+                <img
+                    class="my-avatar"
+                    src="https://i.pinimg.com/originals/84/ca/bf/84cabfb16569c12eb3de04dc2f11374e.gif"
+                />
+                <div class="text">
+                    <div class="certificate">Certificate</div>
+                    <div>for completing</div>
+                    <div class="subject heartbeat">
+                        HTML / CSS Code Ninja Trial
+                    </div>
+                    <div>This certificate is passed down to</div>
+                    <div class="name">Jack Vo</div>
+                </div>
+            </div>
+            <img
+                class="img-1"
+                src="https://media.tenor.com/IW5jiF1BZHQAAAAi/confetti-glitter.gif"
+            />
+            <img
+                class="img-2"
+                src="https://media.tenor.com/jIbb8QAArX8AAAAi/blukittie-blu.gif"
+            />
+            <img
+                class="img-3"
+                src="https://i.pinimg.com/originals/a2/94/66/a294669e569c68ee777acaa990d21bd9.gif"
+            />
+            <img
+                class="img-4"
+                src="https://media.tenor.com/fqDzKdvLIhYAAAAi/dinosaur-dancing-dino.gif"
+            />
+        </div>
+        <img
+            class="tada-1"
+            src="https://i.pinimg.com/originals/e7/d7/47/e7d747f1aed129d3da6de4371fc9165a.gif"
+        />
+        <img
+            class="tada-2"
+            src="https://i.pinimg.com/originals/1f/05/54/1f0554e2ad5b457ba6aa38c2ccf0609a.gif"
+        />
+        <img
+            class="tada-3"
+            src="https://i.pinimg.com/originals/0a/05/06/0a0506e14d89bfb0cd0223bcac76d6da.gif"
+        />
+    </body>
+</html>
