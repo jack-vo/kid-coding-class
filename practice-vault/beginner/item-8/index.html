@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Practice Item 8</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+            body {
+                position: relative;
+                margin: 0;
+                font-family: 'SUSE', sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .cover-section {
+                position: relative;
+                flex: 1;
+                overflow: hidden;
+            }
+
+            .box {
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                top: 250px;
+                left: calc(50% - 75px);
+            }
+
+            .decorator {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                transform: rotate(45deg);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            }
+
+            .content {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                text-align: center;
+            }
+
+            .content div {
+                padding: 10px;
+            }
+
+            .cover-section img {
+                max-height: 100vh;
+            }
+
+            .v-line {
+                position: absolute;
+                width: 10px;
+                height: 100%;
+                background: #fff;
+                top: 0;
+                left: calc(50% - 5px);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            }
+
+            .h-line {
+                position: absolute;
+                width: 100%;
+                height: 10px;
+                background: #fff;
+                top: 315px;
+                left: 0;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+            }
+
+            .content-section {
+                display: flex;
+                flex: 1;
+                gap: 20px;
+                padding: 40px;
+            }
+
+            .content-section p {
+                margin-bottom: 30px;
+            }
+
+            .decorator-img {
+                width: 250px;
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                z-index: -1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="cover-section">
+                <img
+                    src="https://r2.erweima.ai/imgcompressed/compressed_800eb83437593b85014f654b7123448e.webp"
+                />
+                <div class="h-line"></div>
+                <div class="v-line"></div>
+                <div class="box">
+                    <div class="decorator"></div>
+                    <div class="content">
+                        <div>
+                            In the heart of the forest, you find the quiet
+                            wisdom of nature and the freedom to wander
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section">
+                <div>
+                    <p>
+                        The forest is a world of its own, filled with mystery
+                        and beauty. As soon as you step under the canopy of
+                        trees, the air changes—it becomes cooler, fresher, and
+                        alive with the sounds of rustling leaves, chirping
+                        birds, and distant animal calls. Sunlight filters
+                        through the branches, casting dappled shadows on the
+                        forest floor, creating a peaceful, almost magical
+                        atmosphere.
+                    </p>
+
+                    <p>
+                        Forests are home to an incredible variety of life. From
+                        towering trees that have stood for centuries to the
+                        smallest insects, each plays a vital role in the
+                        ecosystem. The balance of life here is delicate but
+                        powerful, as every plant and creature contributes to the
+                        health of the environment, working in harmony to sustain
+                        the natural world.
+                    </p>
+
+                    <p>
+                        Walking through a forest can be a deeply calming
+                        experience. The gentle sway of the trees, the earthy
+                        scent of moss and soil, and the sense of solitude can
+                        help clear your mind and bring a sense of peace. It is a
+                        place where time slows down, and you can reconnect with
+                        nature, far away from the hustle and bustle of everyday
+                        life.
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        Forests also play a critical role in sustaining the
+                        planet. They absorb carbon dioxide, produce oxygen, and
+                        provide habitats for countless species. In many ways,
+                        forests are the lungs of the Earth, purifying the air
+                        and regulating the climate, making them essential for
+                        the well-being of all life forms.
+                    </p>
+
+                    <p>
+                        In the end, the forest is more than just a collection of
+                        trees—it's a reminder of the interconnectedness of all
+                        living things. It teaches us to respect nature's rhythms
+                        and to understand that we are just one part of a much
+                        larger, intricate system. A walk through the woods is a
+                        journey not just through nature, but through ourselves.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <img
+            class="decorator-img"
+            src="https://i.pinimg.com/originals/8d/f4/8d/8df48d5a099955c76dd355c5891e071c.gif"
+        />
+    </body>
+</html>
