@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Rock - Paper - Scissor</title>
+        <meta name="robots" content="noindex" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+            body {
+                background-color: #f8f8f8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                height: 100vh;
+
+                font-family: 'Pixelify Sans', sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .container {
+                position: relative;
+            }
+
+            .device-bg {
+                height: 668px;
+                width: 1590px;
+            }
+
+            .game-bg {
+                position: absolute;
+                height: 611px;
+                top: 30px;
+                left: 250px;
+                border-radius: 9px;
+                border: 1px solid black;
+            }
+
+            .board {
+                position: absolute;
+                width: 460px;
+                height: 270px;
+                top: 66px;
+                left: 293px;
+                border: 1px solid black;
+                box-shadow: 0 20px 40px rgba(255, 0, 0, 0.7);
+            }
+
+            .tv {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            .avatar {
+                position: absolute;
+                font-size: 32px;
+                bottom: 24px;
+                color: rgba(255, 255, 255, 0.6);
+                text-shadow: 1px 2px black;
+            }
+
+            .score-board {
+                position: absolute;
+                display: flex;
+                gap: 10px;
+                bottom: 100px;
+                left: 170px;
+                font-size: 70px;
+                color: rgba(255, 255, 255, 0.9);
+                text-shadow: 1px 3px black;
+            }
+
+            .player {
+                left: 82px;
+            }
+
+            .robot {
+                right: 82px;
+            }
+
+            .player-choice,
+            .robot-choice {
+                position: absolute;
+                font-size: 40px;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 4px solid rgba(255, 255, 255, 0.9);
+                color: rgba(255, 255, 255, 0.9);
+                text-shadow: 2px 2px black;
+                box-shadow: 2px 2px black;
+            }
+
+            .player-choice {
+                top: 5px;
+                left: 64px;
+            }
+
+            .robot-choice {
+                top: 5px;
+                right: 64px;
+            }
+
+            .game-choices {
+                position: absolute;
+                background: rgba(255, 255, 255, 0.9);
+                border-radius: 20px;
+                padding: 30px;
+                top: 100px;
+                right: 300px;
+                display: flex;
+                gap: 30px;
+                box-shadow: 0 0 10px black;
+            }
+
+            .decorator {
+                position: absolute;
+                bottom: -40px;
+                left: 110px;
+                width: 0;
+                height: 0;
+                border: 20px solid transparent;
+                border-top-color: rgba(255, 255, 255, 0.9);
+            }
+
+            .game-choices .choice {
+                width: 120px;
+                height: 120px;
+                font-size: 60px;
+                border-radius: 20px;
+                background: transparent;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .choice:hover {
+                background-color: hotpink;
+                border-color: deeppink;
+                color: white;
+                transform: scale(1.2, 1.2);
+            }
+
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img
+                class="device-bg"
+                src="https://www.nintendo.com/eu/media/images/08_content_images/systems_5/nintendo_switch_3/nintendo_switch_oled/CI_NSwitch_big_screen_bg.png"
+            />
+            <img class="game-bg" src="https://i.redd.it/x4hnwsvps4h91.gif" />
+
+            <div class="board">
+                <img
+                    class="tv"
+                    src="https://media2.giphy.com/media/tJbWmi9jkdsdG8tIJS/giphy-downsized.gif"
+                />
+                <div class="score-board">
+                    <div class="player-score">0</div>
+                    -
+                    <div class="robot-score">0</div>
+                </div>
+                <div class="avatar player">
+                    <i class="fa-solid fa-user-ninja"></i>
+                </div>
+                <div class="avatar robot">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="player-choice">
+                    <div class="no-choice">
+                        <i class="fa-solid fa-question"></i>
+                    </div>
+                    <div class="choice hidden">
+                        <i class="fa-solid fa-hand-back-fist"></i>
+                    </div>
+                    <div class="choice hidden">
+                        <i class="fa-solid fa-hand"></i>
+                    </div>
+                    <div class="choice hidden">
+                        <i class="fa-solid fa-hand-scissors"></i>
+                    </div>
+                </div>
+
+                <div class="robot-choice">
+                    <div class="no-choice">
+                        <i class="fa-solid fa-question"></i>
+                    </div>
+                    <div class="choice hidden">
+                        <i class="fa-solid fa-hand-back-fist"></i>
+                    </div>
+                    <div class="choice hidden">
+                        <i class="fa-solid fa-hand"></i>
+                    </div>
+                    <div class="choice hidden">
+                        <i class="fa-solid fa-hand-scissors"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="game-choices">
+                <div class="decorator"></div>
+                <button class="choice">
+                    <i class="fa-solid fa-hand-back-fist"></i>
+                </button>
+                <button class="choice">
+                    <i class="fa-solid fa-hand"></i>
+                </button>
+                <button class="choice">
+                    <i class="fa-solid fa-hand-scissors"></i>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
