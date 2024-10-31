@@ -17,8 +17,8 @@
             <button onclick="playerPick('rock')">Rock</button>
             <button onclick="playerPick('paper')">Paper</button>
             <button onclick="playerPick('scissor')">Scissor</button>
-            <div>Player picks: <span class="player-choice">???</span></div>
-            <div>Robot picks: <span class="robot-choice">???</span></div>
+            <div class="player-choice">Player picks: ???</div>
+            <div class="robot-choice">Robot picks: ???</div>
             <div class="result"></div>
         </div>
         <script>
@@ -34,9 +34,10 @@
                     robotChoice = 'scissor';
                 }
 
-                document.querySelector('.player-choice').innerHTML = choice;
+                document.querySelector('.player-choice').innerHTML =
+                    `Player picks: ${choice}`;
                 document.querySelector('.robot-choice').textContent =
-                    robotChoice;
+                    `Robot picks: ${robotChoice}`;
 
                 decideWinner(choice, robotChoice);
             }
