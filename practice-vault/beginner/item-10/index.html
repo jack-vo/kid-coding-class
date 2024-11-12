@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Item 9</title>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                text-align: center;
+            }
+
+            .button {
+                padding: 15px 20px;
+                width: 200px;
+                background-color: crimson;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 20px;
+            }
+            .button:hover {
+                background-color: #ff4500;
+            }
+
+            .game {
+                font-size: 20px;
+                margin: 40px;
+            }
+
+            .result {
+                margin-top: 20px;
+                font-size: 30px;
+                text-decoration: underline;
+                color: orangered;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="title">Guess the number</h1>
+                <div class="rule">
+                    <div>
+                        Pick your number range. If the robot randomly picks a
+                        number within the range you pick, you WIN!
+                    </div>
+                </div>
+            </div>
+            <div class="game">
+                <div class="player-choice"></div>
+                <div class="robot-choice"></div>
+                <div class="result"></div>
+            </div>
+            <div>
+                <button class="button" onclick="pickRange(0, 10)">0-10</button>
+                <button class="button" onclick="pickRange(11, 20)">
+                    11-20
+                </button>
+                <button class="button" onclick="pickRange(21, 30)">
+                    21-30
+                </button>
+            </div>
+            <script>
+                function pickRange(min, max) {
+                    let randomNumber = Math.round(Math.random() * 30);
+                    let playerChoiceMessage = `Player picks: ${min}-${max}`;
+                    let robotChoiceMessage = `Computer picks: ${randomNumber}`;
+
+                    document.querySelector('.player-choice').innerHTML =
+                        playerChoiceMessage;
+                    document.querySelector('.robot-choice').innerHTML =
+                        robotChoiceMessage;
+
+                    let resultMessage;
+
+                    if (randomNumber >= min && randomNumber <= max) {
+                        resultMessage = 'You WIN!';
+                    } else {
+                        resultMessage = 'You LOSE!';
+                    }
+
+                    document.querySelector('.result').innerHTML = resultMessage;
+                }
+            </script>
+        </div>
+    </body>
+</html>
