@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Item 9</title>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+
+            .button {
+                padding: 15px 20px;
+                background-color: #aaa;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 20px;
+            }
+
+            .fancy-intro-button {
+                background-color: #007bff;
+            }
+
+            .name {
+                color: crimson;
+                font-size: 46px;
+            }
+            .age {
+                text-decoration: underline;
+                color: #bbb;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="title">Hello ...</h1>
+                <div class="content"></div>
+            </div>
+            <div>
+                <button class="button" onclick="simpleIntro()">
+                    Simple introduction
+                </button>
+                <button
+                    class="button fancy-intro-button"
+                    onclick="fancyIntro()"
+                >
+                    Fancy introduction
+                </button>
+            </div>
+            <script>
+                function simpleIntro() {
+                    let simpleMessage = `Hello, I'm Jack Vo, 40 years old!`;
+                    document.querySelector('.title').innerHTML = simpleMessage;
+                }
+
+                function fancyIntro() {
+                    let fancyMessage = `Hello, I'm <span class="name">Jack Vo</span>, <span class="age">40 years old</span>!`;
+                    document.querySelector('.title').innerHTML = fancyMessage;
+                }
+            </script>
+        </div>
+    </body>
+</html>

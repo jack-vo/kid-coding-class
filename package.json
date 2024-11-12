@@ -6,15 +6,18 @@
   "author": "Jack Vo <jackvo.au@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "server:start": "yarn http-server --cors"
+    "server:start": "yarn http-server --cors",
+    "live-server": "live-server"
   },
   "stackblitz": {
     "installDependencies": true,
-    "startCommand": "yarn run server:start"
+    "startCommand": "yarn run live-server"
   },
   "devDependencies": {
     "http-server": "^14.1.1",
     "prettier": "^3.3.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "live-server": "^1.2.2"
+  }
 }

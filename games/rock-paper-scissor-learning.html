@@ -23,8 +23,10 @@
         </div>
         <script>
             function playerPick(choice) {
-                let randomNumber = Math.floor(Math.random() * 3);
+                let randomNumber = Math.round(Math.random() * 3);
                 let robotChoice;
+
+                console.log('Random number', randomNumber);
 
                 if (randomNumber === 0) {
                     robotChoice = 'rock';
@@ -34,12 +36,26 @@
                     robotChoice = 'scissor';
                 }
 
+                console.log('Robot choice', robotChoice);
+
                 document.querySelector('.player-choice').innerHTML =
                     `Player picks: ${choice}`;
-                document.querySelector('.robot-choice').textContent =
-                    `Robot picks: ${robotChoice}`;
 
-                decideWinner(choice, robotChoice);
+                let robotMessage = `Robot picks: ${robotChoice}`;
+
+                document.querySelector('.robot-choice').innerHTML =
+                    robotMessage;
+
+                let winner = decideWinner(choice, robotChoice);
+
+                console.log('Winner', winner);
+
+                if (winner === 'Draw') {
+                    document.querySelector('.result').innerHTML = 'Draw';
+                } else {
+                    document.querySelector('.result').innerHTML =
+                        `The winner is ${winner}`;
+                }
             }
 
             function decideWinner(playerChoice, robotChoice) {
@@ -70,12 +86,7 @@
                     winner = 'Draw';
                 }
 
-                if (winner === 'Draw') {
-                    document.querySelector('.result').innerHTML = 'Draw';
-                } else {
-                    document.querySelector('.result').innerHTML =
-                        `The winner is ${winner}`;
-                }
+                return winner;
             }
         </script>
     </body>
