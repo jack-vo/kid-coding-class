@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Item 13</title>
+        <style>
+            body {
+                background: #0e0e0e;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                text-align: center;
+            }
+
+            .input {
+                height: 50px;
+                font-size: 30px;
+                text-align: center;
+                border-radius: 0;
+                padding: 0;
+                margin-right: 10px;
+                border: none;
+                box-shadow: 0 0 10px orangered;
+            }
+
+            .button {
+                border-radius: 20px;
+                background-color: #333;
+                color: #fff;
+                border: none;
+                padding: 10px 40px;
+                font-size: 24px;
+                margin-top: 20px;
+            }
+
+            .equal-text {
+                font-size: 30px;
+                color: #fff;
+                margin-right: 10px;
+            }
+
+            .result {
+                margin-top: 20px;
+                font-size: 30px;
+                color: orangered;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <label>
+                    <input
+                        type="number"
+                        class="input first-number"
+                        placeholder="1st number"
+                    />
+                </label>
+                <label>
+                    <select class="input operator">
+                        <option value="plus">Plus</option>
+                        <option value="minus">Minus</option>
+                        <option value="divide">Divide by</option>
+                        <option value="time">Time</option>
+                    </select>
+                </label>
+                <label>
+                    <input
+                        type="number"
+                        class="input second-number"
+                        placeholder="2nd number"
+                    />
+                </label>
+                <label>
+                    <span class="equal-text">=</span>
+                    <input type="number" class="input result" readonly />
+                </label>
+            </div>
+            <div>
+                <button class="button" onclick="calculate()">Calculate</button>
+            </div>
+            <script>
+                function calculate() {
+                    let firstNumber = Number(
+                        document.querySelector('.first-number').value,
+                    );
+                    let secondNumber = Number(
+                        document.querySelector('.second-number').value,
+                    );
+                    let operator = document.querySelector('.operator').value;
+                    let result;
+
+                    if (operator === 'plus') {
+                        result = firstNumber + secondNumber;
+                    } else if (operator === 'divide') {
+                        result = firstNumber / secondNumber;
+                    } else if (operator === 'time') {
+                        result = firstNumber * secondNumber;
+                    } else if (operator === 'minus') {
+                        result = firstNumber - secondNumber;
+                    }
+
+                    document.querySelector('.result').value = result;
+                }
+            </script>
+        </div>
+    </body>
+</html>

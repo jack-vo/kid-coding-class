@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mysterious Box</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            .container {
+                text-align: center;
+            }
+            .box {
+                width: 200px;
+                height: 200px;
+                background: #fff
+                    url('https://gifdb.com/images/thumbnail/bouncing-gift-box-o19ltvr8ldanpz66.gif')
+                    no-repeat center/cover;
+                margin: 20px auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .opened {
+                background: #fff
+                    url('https://media0.giphy.com/media/QYkViQRNkpS1Sgx0js/giphy.gif')
+                    no-repeat center/cover;
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .gif1 {
+                background-image: url('https://example.com/gif1.gif');
+                background-size: cover;
+            }
+
+            .gif2 {
+                background-image: url('https://example.com/gif2.gif');
+                background-size: cover;
+            }
+
+            .gif3 {
+                background-image: url('https://example.com/gif3.gif');
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box opened">
+                <img
+                    src="https://cdn.startselect.com/production/products/images/64f47/63003/2758668536-180x180.png?id=5cc5342b38a719aa92798e891ff5c291"
+                />
+                <img
+                    src="https://cdn.creazilla.com/cliparts/7820941/electric-scooter-clipart-xl.png"
+                />
+            </div>
+            <button id="revealButton">Reveal the Mystery!</button>
+        </div>
+    </body>
+</html>
