@@ -1,70 +1,154 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Mysterious Box</title>
+        <title>Practice Vault - Item 14</title>
         <style>
             body {
-                font-family: Arial, sans-serif;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin: 0;
+                background-color: #f8f8f8;
             }
+
             .container {
+                position: relative;
+                margin: 50px auto;
+                width: 700px;
+                height: 500px;
+                border: 2px solid #ccc;
+            }
+
+            .outside {
+                background: #ccc;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .outside:hover {
+                cursor: crosshair;
+            }
+
+            .box-1 {
+                width: 60px;
+                height: 60px;
+                background-color: #dc143c;
+                position: absolute;
+                top: 200px;
+                left: -60px;
+                animation: move-like-crazy 5s ease-out infinite;
+            }
+
+            .box-1:hover {
+                cursor: crosshair;
+                background: orangered;
+            }
+
+            @keyframes move-like-crazy {
+                0% {
+                    top: 200px;
+                    left: -60px;
+                }
+                15% {
+                    top: 500px;
+                    left: 700px;
+                }
+                30% {
+                    top: 200px;
+                    left: -60px;
+                }
+                45% {
+                    top: 400px;
+                    left: 700px;
+                }
+                60% {
+                    top: 300px;
+                    left: -60px;
+                }
+                65% {
+                    top: 400px;
+                    left: 700px;
+                }
+                80% {
+                    top: 50px;
+                    left: -60px;
+                }
+                90% {
+                    top: 500px;
+                    left: 700px;
+                }
+                100% {
+                    top: 200px;
+                    left: -60px;
+                }
+            }
+
+            .box-2 {
+                width: 60px;
+                height: 60px;
+                background-color: #143fdc;
+                position: absolute;
+                top: -60px;
+                left: 300px;
+                animation: move-up-down 2.5s ease-out infinite forwards;
+            }
+
+            .box-2:hover {
+                cursor: crosshair;
+                background: blue;
+            }
+
+            @keyframes move-up-down {
+                0% {
+                    top: -60px;
+                    left: 300px;
+                }
+                50% {
+                    top: 500px;
+                    left: 300px;
+                }
+                100% {
+                    top: -60px;
+                    left: 300px;
+                }
+            }
+
+            .score-container {
+                margin-top: 120px;
                 text-align: center;
+                font-size: 30px;
             }
-            .box {
-                width: 200px;
-                height: 200px;
-                background: #fff
-                    url('https://gifdb.com/images/thumbnail/bouncing-gift-box-o19ltvr8ldanpz66.gif')
-                    no-repeat center/cover;
-                margin: 20px auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .opened {
-                background: #fff
-                    url('https://media0.giphy.com/media/QYkViQRNkpS1Sgx0js/giphy.gif')
-                    no-repeat center/cover;
-            }
-
-            .hidden {
-                display: none;
-            }
-
-            .gif1 {
-                background-image: url('https://example.com/gif1.gif');
-                background-size: cover;
-            }
-
-            .gif2 {
-                background-image: url('https://example.com/gif2.gif');
-                background-size: cover;
-            }
-
-            .gif3 {
-                background-image: url('https://example.com/gif3.gif');
-                background-size: cover;
+            .score {
+                font-weight: bold;
+                font-size: 40px;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="box opened">
-                <img
-                    src="https://cdn.startselect.com/production/products/images/64f47/63003/2758668536-180x180.png?id=5cc5342b38a719aa92798e891ff5c291"
-                />
-                <img
-                    src="https://cdn.creazilla.com/cliparts/7820941/electric-scooter-clipart-xl.png"
-                />
-            </div>
-            <button id="revealButton">Reveal the Mystery!</button>
+            <div class="outside" onclick="onHittingContainer()"></div>
+            <div class="box-1" onclick="onHittingCrazyBox()"></div>
+            <div class="box-2" onclick="onHittingNormalBox()"></div>
         </div>
+        <div class="score-container">
+            My score: <span class="score">0</span>
+        </div>
+
+        <script>
+            let score = 0;
+            let scoreElement = document.querySelector('.score');
+
+            function onHittingContainer() {
+                score = score - 1;
+                scoreElement.innerHTML = score;
+            }
+
+            function onHittingNormalBox() {
+                score = score + 3;
+                scoreElement.innerHTML = score;
+            }
+
+            function onHittingCrazyBox() {
+                score = score + 20;
+                scoreElement.innerHTML = score;
+            }
+        </script>
     </body>
 </html>
