@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Practice Vault - Item 14</title>
+        <style>
+            .container {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+            .my-box {
+                background-color: gray;
+                width: 100px;
+                height: 100px;
+            }
+
+            .red {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="my-box"></div>
+            <button class="add-color-btn" onclick="turnRed()">
+                Turning red
+            </button>
+            <button class="remove-color-btn" onclick="goBackToNormalColor()">
+                Go back to normal color
+            </button>
+        </div>
+        <script>
+            function turnRed() {
+                const box = document.querySelector('.my-box');
+
+                box.classList.add('red');
+            }
+
+            function goBackToNormalColor() {
+                const box = document.querySelector('.my-box');
+
+                box.classList.remove('red');
+            }
+        </script>
+    </body>
+</html>
