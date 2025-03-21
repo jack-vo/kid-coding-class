@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Practice Vault - Go rainbown</title>
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                background: #f8f8f8;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.5s;
+            }
+
+            .button {
+                border-radius: 20px;
+                background-color: #333;
+                color: #fff;
+                border: none;
+                padding: 10px 40px;
+                font-size: 24px;
+                margin-top: 20px;
+                transition: all 0.3s;
+            }
+
+            .button:hover {
+                transform: scale(1.2, 1.2);
+                background-color: #555;
+            }
+
+            .red {
+                background-color: red;
+            }
+            .orange {
+                background-color: orange;
+            }
+            .yellow {
+                background-color: yellow;
+            }
+            .green {
+                background-color: green;
+            }
+            .blue {
+                background-color: blue;
+            }
+            .indigo {
+                background-color: indigo;
+            }
+            .violet {
+                background-color: violet;
+            }
+        </style>
+    </head>
+    <body class="red">
+        <button class="button" onclick="changeColor()">Change the color</button>
+        <script>
+            function changeColor() {
+                const body = document.querySelector('body');
+
+                if (body.classList.contains('red')) {
+                    body.classList.remove('red');
+                    body.classList.add('orange');
+                } else if (body.classList.contains('orange')) {
+                    body.classList.remove('orange');
+                    body.classList.add('yellow');
+                } else if (body.classList.contains('yellow')) {
+                    body.classList.remove('yellow');
+                    body.classList.add('green');
+                } else if (body.classList.contains('green')) {
+                    body.classList.remove('green');
+                    body.classList.add('blue');
+                } else if (body.classList.contains('blue')) {
+                    body.classList.remove('blue');
+                    body.classList.add('indigo');
+                } else if (body.classList.contains('indigo')) {
+                    body.classList.remove('indigo');
+                    body.classList.add('violet');
+                } else if (body.classList.contains('violet')) {
+                    body.classList.remove('violet');
+                    body.classList.add('red');
+                }
+            }
+        </script>
+    </body>
+</html>

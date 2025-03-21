@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Practice Vault - Item 16 - Game</title>
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                background: #f8f8f8;
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .row {
+                display: flex;
+                margin-bottom: 20px;
+                gap: 20px;
+            }
+
+            .item {
+                cursor: pointer;
+                background: lightgrey;
+                width: 120px;
+                height: 120px;
+                border: 4px solid #bbb;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 50px;
+                color: transparent;
+                transition: all 0.3s;
+            }
+
+            .selected {
+                background: white;
+                color: crimson;
+            }
+
+            .matched {
+                background: lightgreen;
+                color: white;
+            }
+
+            .item:hover {
+                transform: scale(1.1, 1.1);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <button
+                    class="item material-icons item-1"
+                    onclick="selectItem('item-1')"
+                >
+                    favorite
+                </button>
+                <button
+                    class="item material-icons item-2"
+                    onclick="selectItem('item-2')"
+                >
+                    thumb_up
+                </button>
+                <button
+                    class="item material-icons item-3"
+                    onclick="selectItem('item-3')"
+                >
+                    favorite
+                </button>
+            </div>
+            <div class="row">
+                <button
+                    class="item material-icons item-4"
+                    onclick="selectItem('item-4')"
+                >
+                    grade
+                </button>
+                <button
+                    class="item material-icons item-5"
+                    onclick="selectItem('item-5')"
+                >
+                    grade
+                </button>
+                <button
+                    class="item material-icons item-6"
+                    onclick="selectItem('item-6')"
+                >
+                    thumb_up
+                </button>
+            </div>
+        </div>
+        <script>
+            let previousSelectedItem;
+
+            function selectItem(item) {
+                let selectedItem = document.querySelector(`.${item}`);
+
+                if (
+                    selectedItem.classList.contains('matched') ||
+                    selectedItem.classList.contains('selected')
+                ) {
+                    return;
+                }
+
+                selectedItem.classList.add('selected');
+
+                // We have not clicked on any item yet
+                if (!previousSelectedItem) {
+                    previousSelectedItem = selectedItem;
+                } else {
+                    // Give it a bit of time so that the user can see the second item
+                    setTimeout(function () {
+                        // we compare previousSelectedItemHtml with the one being clicked
+                        // if matched, we make both of them have the class "matched"
+                        if (
+                            previousSelectedItem.innerHTML ===
+                            selectedItem.innerHTML
+                        ) {
+                            previousSelectedItem.classList.add('matched');
+                            selectedItem.classList.add('matched');
+                        } else {
+                            // not matched, we remove the class "selected" from both
+                            previousSelectedItem.classList.remove('selected');
+                            selectedItem.classList.remove('selected');
+                        }
+
+                        previousSelectedItem = undefined;
+                    }, 300);
+                }
+            }
+        </script>
+    </body>
+</html>
