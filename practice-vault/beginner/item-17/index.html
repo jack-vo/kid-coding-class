@@ -102,36 +102,36 @@
                 let selectedItem = document.querySelector(`.${item}`);
 
                 if (
-                    selectedItem.classList.contains('matched') ||
-                    selectedItem.classList.contains('selected')
+                    !selectedItem.classList.contains('matched') &&
+                    !selectedItem.classList.contains('selected')
                 ) {
-                    return;
-                }
+                    selectedItem.classList.add('selected');
 
-                selectedItem.classList.add('selected');
+                    // We have not clicked on any item yet
+                    if (!previousSelectedItem) {
+                        previousSelectedItem = selectedItem;
+                    } else {
+                        // Give it a bit of time so that the user can see the second item
+                        setTimeout(function () {
+                            // we compare previousSelectedItemHtml with the one being clicked
+                            // if matched, we make both of them have the class "matched"
+                            if (
+                                previousSelectedItem.innerHTML ===
+                                selectedItem.innerHTML
+                            ) {
+                                previousSelectedItem.classList.add('matched');
+                                selectedItem.classList.add('matched');
+                            } else {
+                                // not matched, we remove the class "selected" from both
+                                previousSelectedItem.classList.remove(
+                                    'selected',
+                                );
+                                selectedItem.classList.remove('selected');
+                            }
 
-                // We have not clicked on any item yet
-                if (!previousSelectedItem) {
-                    previousSelectedItem = selectedItem;
-                } else {
-                    // Give it a bit of time so that the user can see the second item
-                    setTimeout(function () {
-                        // we compare previousSelectedItemHtml with the one being clicked
-                        // if matched, we make both of them have the class "matched"
-                        if (
-                            previousSelectedItem.innerHTML ===
-                            selectedItem.innerHTML
-                        ) {
-                            previousSelectedItem.classList.add('matched');
-                            selectedItem.classList.add('matched');
-                        } else {
-                            // not matched, we remove the class "selected" from both
-                            previousSelectedItem.classList.remove('selected');
-                            selectedItem.classList.remove('selected');
-                        }
-
-                        previousSelectedItem = undefined;
-                    }, 300);
+                            previousSelectedItem = undefined;
+                        }, 300);
+                    }
                 }
             }
         </script>
